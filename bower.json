@@ -1,0 +1,21 @@
+{
+  "name": "MyStore",
+  "version": "0.0.0",
+  "main": "index.html",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "homepage": "https://github.com/sjaiello/geekwise",
+  "authors": [
+    "Steve Aiello <steve@onfarmsystems.com>"
+  ],
+  "dependencies": {
+    "angular-ui-router": "~0.2.10"
+  }
+}
