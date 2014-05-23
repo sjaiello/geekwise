@@ -14,8 +14,17 @@
 		</div>
 	</div>
 	<div class="products">
+        <div class="row form-group">
+            <div class="input-group">
+                <input type="text" class="form-control" ng-model="productSearch.title">
+            <span class="input-group-btn">
+              <button type="button" class="btn btn-default">search</button>
+            </span>
+            </div>
+            <p class="help-block" ng-show="productSearch.title.length">Showing results for <strong ng-bind="productSearch.title"></strong></p>
+        </div>
 	  <!-- loop over products -->
-		<div class="product-box" ng-repeat="product in products">
+		<div class="product-box" ng-repeat="product in products | filter:productSearch">
 		  <!-- Product title -->
 			<div class='title' ng-bind="product.title"></div>
 			<div class='show-base'>
@@ -27,12 +36,12 @@
 					<!-- Conditional old class -->
 					<p></p>
 					<!-- Conditionally show special price -->
-					<p>ng-bind="product.price"</p>
+					<p ng-bind="product.price"></p>
 					<div class="description" ng-bind="product.description">
 						<!-- Product description -->
 					</div>
 					<div>
-						<a href="#" class="more">Details</a>
+						<<a ui-sref="product({id: product.guid})" class="more">Details</a>
 						<a href="#" class="tocart">To Cart</a>
 					</div>
 				</div>
