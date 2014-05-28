@@ -7,16 +7,14 @@
 		var errorCallback = function(reason){
 			$scope.errorMessage = reason.statusText;
 		};
-        ProductService.getProducts()
-		.then(
+        ProductService.getProducts().then(
 			function(response){
 				$scope.products=response.data;
 			},
 			errorCallback
 		);
 
-		ProductService.getProductFilters()
-		.then(
+		ProductService.getProductFilters().then(
 			function(response){
 				$scope.filters = response.data;
 			},
