@@ -1,3 +1,5 @@
+<ms-mini-cart></ms-mini-cart>
+
 <div class="row">
 
     <div class="col-sm-3">
@@ -16,11 +18,18 @@
         <p ng-bind="product.description"></p>
 
         <div>
-            <button type="button" class="btn btn-primary">To Cart</button>
+            <ms-add-cart-button product="product"></ms-add-cart-button>
         </div>
     </div>
 </div>
 
 <div class="row">
+    <div class="col-sm-offset-2 col-sm-12 featured">
+        <div class="small">
+            <div class="three" ng-repeat="product in featuredProducts | limitTo: 3">
+                <ms_featured_product product="product"></ms_featured_product>
+            </div>
+        </div>
+    </div>
     <a>Return to Products</a>
 </div>

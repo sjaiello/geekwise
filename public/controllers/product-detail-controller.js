@@ -7,6 +7,8 @@
             // Set the id from the $stateParams to a local product_guid variable
             var product_guid = $stateParams.id;
 
+            $scope.featuredProducts = [];
+
             // Initialize an empty product variable on the scope
             $scope.product;
 
@@ -20,10 +22,12 @@
                 angular.forEach(products, function(product) {
 
                     // Check if the current product's guid property is equal to id from the URL
-                    if(product.guid === product_guid) {
 
-                        // We've found a match, add the matching product to the $scope
+                    if(product.guid === product_guid){
                         $scope.product = product;
+
+                    } else if(product.isFeatured){
+                        $scope.featuredProducts.push(product);
                     }
                 });
             });

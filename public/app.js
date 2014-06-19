@@ -2,7 +2,7 @@
 	"use strict";
 
 
-	var app = angular.module('MyStore', ['ui.router']);
+	var app = angular.module('MyStore', ['ui.router', 'ngCookies', 'ngMessages']);
 })(window.angular);
 
 /*

@@ -1,4 +1,6 @@
 <div>
+    <ms-mini-cart></ms-mini-cart>
+
 	<div class="filters">
 	  <!-- Loop over filters -->
 		<div class="filter-block" ng-repeat="filter in filters">
@@ -41,8 +43,9 @@
 						<!-- Product description -->
 					</div>
 					<div>
-						<a ui-sref="product({id: product.guid})" class="more">Details</a>
-						<a href="#" class="tocart">To Cart</a>
+                        <ms-product-details-button product-id="{{product.guid}}"></ms-product-details-button>
+                        <ms-add-cart-button product="product"></ms-add-cart-button>
+                        <!--    <a href="#" class="tocart">To Cart</a>-->
 					</div>
 				</div>
 			</div>
