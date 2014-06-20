@@ -12,11 +12,19 @@
 
         $scope.removeItem = CartService.removeItem;
 
+        $scope.emptyCart = CartService.emptyCart;
+
         $scope.cartSubtotal = CartService.getCartSubtotal;
 
-        $scope.cartTotal = CartService.getCartTotal;
+        $scope.cartTotal = function(){
+            return CartService.getCartTotal;
+        }
 
         $scope.getItemCount = CartService.getItemCount;
+
+        $scope.checkout = function(){
+            CartService.checkout();
+        }
 
     });
 

@@ -16,6 +16,10 @@
     "Steve Aiello <steve@onfarmsystems.com>"
   ],
   "dependencies": {
-    "angular-ui-router": "~0.2.10"
+    "angular-ui-router": "~0.2.10",
+    "jquery": "1.11.1"
+  },
+  "resolutions": {
+    "jquery": "1.11.1"
   }
 }
